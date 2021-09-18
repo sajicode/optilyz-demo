@@ -21,3 +21,14 @@
 - A loader component is displayed while data is being fetched from the server.
 - Default images are also utilised while images are loading or in the absence of a movie poster.
 
+## Local Setup
+- Run `yarn install` or `npm install` to install the required packages
+### Development mode
+- Run `yarn start:dev` or `npm run start:dev` in your terminal to start the client server
+- Run `yarn start` or `npm start` to run the backend server
+
+### Production mode
+- Run `yarn build` or `npm run build` to build the client folder.
+- Set `NODE_ENV` in your `.env` file to `production` e.g `NODE_ENV=production`
+- Run `yarn start` or `npm start` to run the production build
+
