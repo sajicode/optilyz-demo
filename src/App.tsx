@@ -1,12 +1,16 @@
-import React from 'react';
+import Header from './components/Header';
+import MovieList from './components/MovieList';
+import MoviesProvider from './context/MoviesContext';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      
-      <h1>APP</h1>
-    </div>
+    <MoviesProvider>
+      <div>
+        <Header />
+        <MovieList />
+      </div>
+    </MoviesProvider>
   );
-}
+};
 
 export default App;
