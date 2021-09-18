@@ -1,10 +1,12 @@
+import React from 'react';
+import { HeaderStyle } from '../styles';
 import Search from './Search';
 
 const Header = () => {
   return (
-    <div>
+    <HeaderStyle>
       <Search />
-    </div>
+    </HeaderStyle>
   );
 };
 

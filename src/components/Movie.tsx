@@ -1,3 +1,5 @@
+import React from 'react';
+import { MovieItem, MovieItemImage } from '../styles/Movie';
 import { MovieType } from '../types';
 
 const defaultPhoto =
@@ -6,13 +8,13 @@ const defaultPhoto =
 const Movie = ({ movie: { Title, Poster } }: { movie: MovieType }) => {
   return (
     <div>
-      <figure>
-        <img
+      <MovieItem>
+        <MovieItemImage
           src={Poster === 'N/A' ? defaultPhoto : Poster}
           alt={Title}
           width={300}
         />
-      </figure>
+      </MovieItem>
     </div>
   );
 };

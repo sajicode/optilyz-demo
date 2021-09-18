@@ -1,5 +1,14 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { MoviesContext } from '../context/MoviesContext';
+import {
+  SearchBox,
+  SearchInputGroup,
+  SearchInput,
+  SearchInputGroupBtn,
+  SearchBtn
+} from '../styles';
 import { ContextType } from '../types';
 
 const Search: React.FC = () => {
@@ -21,25 +30,25 @@ const Search: React.FC = () => {
   };
 
   return (
-    <div>
+    <SearchBox>
       <form onSubmit={(e) => handleFetchMovies(e, keyword)}>
-        <div>
-          <input
+        <SearchInputGroup>
+          <SearchInput
             type="text"
             name="search"
             placeholder="Enter a movie title"
             onChange={handleForm}
           />
-          <span>
-            <button
+          <SearchInputGroupBtn>
+            <SearchBtn
               disabled={keyword === null || keyword === '' ? true : false}
             >
-              Search
-            </button>
-          </span>
-        </div>
+              <FontAwesomeIcon icon={faSearch} />
+            </SearchBtn>
+          </SearchInputGroupBtn>
+        </SearchInputGroup>
       </form>
-    </div>
+    </SearchBox>
   );
 };
 

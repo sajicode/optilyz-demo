@@ -1,8 +1,10 @@
+import { ErrorStyles } from '../styles';
+
 const Error = ({ message }: { message: string }) => {
   return (
-    <div>
+    <ErrorStyles>
       <h1>{message}</h1>
-    </div>
+    </ErrorStyles>
   );
 };
 

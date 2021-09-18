@@ -1,8 +1,11 @@
+import React from 'react';
+import { Loader, LoaderImage } from '../styles/Loader';
+
 const LoadingPage = () => {
   return (
-    <div>
-      <img src="/images/loader.gif" />
-    </div>
+    <Loader>
+      <LoaderImage src="/images/loader.gif" />
+    </Loader>
   );
 };
 

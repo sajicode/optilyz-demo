@@ -1,5 +1,6 @@
-import { Fragment, useContext, useEffect } from 'react';
+import React, { Fragment, useContext, useEffect } from 'react';
 import { MoviesContext } from '../context/MoviesContext';
+import { Container, Movies } from '../styles';
 import { ContextType } from '../types';
 import Error from './Error';
 import LoadingPage from './Loader';
@@ -35,17 +36,18 @@ const MovieList = () => {
   }
 
   if (error) {
+    console.log({ error });
     return <Error message={error} />;
   }
 
   return (
     <Fragment>
-      <div>
-        <div>
+      <Container>
+        <Movies>
           {movies &&
             movies.map((movie) => <Movie movie={movie} key={movie.imdbID} />)}
-        </div>
-      </div>
+        </Movies>
+      </Container>
     </Fragment>
   );
 };
